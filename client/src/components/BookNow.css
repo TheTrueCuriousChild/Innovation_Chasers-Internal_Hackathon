@@ -1,0 +1,108 @@
+.booknow-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto;
+  background-color: white;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+}
+
+.booknow-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1d4ed8;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.location-select {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.location-select label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.location-select select {
+  padding: 8px 16px;
+  font-size: 1rem;
+  border: 1px solid #333;
+  border-radius: 6px;
+  outline: none;
+  background-color: #222;
+  color: #fff;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.card {
+  background-color: #fff;
+  width: 280px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e40af;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 0.9rem;
+  color: #444;
+  margin: 4px 0;
+}
+
+.card-content button {
+  margin-top: 15px;
+  padding: 10px 16px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.card-content button:hover {
+  background-color: #1d4ed8;
+}
