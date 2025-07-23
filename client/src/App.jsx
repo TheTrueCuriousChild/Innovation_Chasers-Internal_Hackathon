@@ -22,7 +22,7 @@ function App() {
         <SignIn />
         <div>
         <SignUp />
-        <p>Welcome to the Sign Up page!</p>
+        
       </div>
       </div>
 
