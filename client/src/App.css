@@ -34,7 +34,8 @@ html, body, #root {
 }
 
 .app.dark .footerSection a,
-.app.dark .footerSection p {
+.app.dark .footerSection p,
+.app.dark .footerSection h3 {
   color: #ccc;
 }
 
@@ -59,4 +60,20 @@ html, body, #root {
 /* Smooth transitions globally */
 * {
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app.dark .navBarList:not(.signInButton) button {
+  background: transparent;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 10px 16px;
+  border-radius: 6px;
+  transition: background 0.2s ease, color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.app.dark .navBarList:not(.signInButton) button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
 }
