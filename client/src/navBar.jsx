@@ -1,6 +1,6 @@
 import './NavBar.css'
 
-function NavBar() {
+function NavBar({ onToggleMode }) {
     return (
         <nav>
             <div className="navBar">
@@ -13,7 +13,7 @@ function NavBar() {
                         <li className="navBarList"><button>Contact</button></li>
                     </div>
                     <div className="navGroupRight">
-                        <li className="navBarList"><button>Mode</button></li>
+                        <li className="navBarList"><button onClick={onToggleMode}>Mode</button></li>
                         <li className="navBarList signInButton"><button>Sign In</button></li>
                     </div>
                 </ul>

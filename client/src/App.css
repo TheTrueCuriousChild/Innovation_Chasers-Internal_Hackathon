@@ -1,21 +1,62 @@
-
+/* Ensure full height layout */
 html, body, #root {
   height: 100%;
   margin: 0;
+  padding: 0;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-#root {
+/* Make the app wrapper flexible */
+.app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+
+  background-color: #fff;
+  color: #111;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.app.dark {
+  background-color: #121212;
+  color: #eee;
+}
+
+/* Page content grows to fill space between navbar and footer */
 .pageContent {
-  flex: 1; /* Pushes footer down when content is short */
-  padding-top: 70px; /* optional: if you want space below navbar */
+  flex: 1;
+  padding-top: 70px; /* creates space below fixed navbar */
+}
+
+/* Footer styles in dark mode */
+.app.dark .footer {
+  background-color: #1e1e1e;
+  color: #ccc;
+}
+
+.app.dark .footerSection a,
+.app.dark .footerSection p {
+  color: #ccc;
+}
+
+.app.dark .footerSection a:hover {
+  color: #fff;
+}
+
+.app.dark .footerBottom {
+  color: #888;
+  border-top: 1px solid #333;
+}
+
+/* Navbar styles in dark mode */
+.app.dark .navBar {
+  background-color: #1f1f1f;
+}
+
+.app.dark .navBarUL {
+  color: #eee;
+}
+
+/* Smooth transitions globally */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
