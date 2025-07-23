@@ -1,23 +1,25 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import BookNow from "./components/BookNow.jsx";
-import "./App.css";
+import { useEffect } from 'react';
+import './App.css';
+import BookNow from './components/BookNow';
 
 function App() {
-  return (
-    <Router>
-      <div className="app-container">
-        <nav>
-          <h1>Turf Booking</h1>
-          <Link to="/book-now">Book Now</Link>
-        </nav>
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-        <Routes>
-          <Route path="/book-now" element={<BookNow />} />
-          <Route path="/" element={<p>Welcome to Turf Booking!</p>} />
-        </Routes>
-      </div>
-    </Router>
+  return (
+    <div className="App">
+      {/* Other sections like navbar, banner etc. can go here */}
+
+      <section className="book-now" data-aos="fade-up">
+        <div className="book-now-content">
+          <h2 className="section-title">Book Your Turf Now</h2>
+          <BookNow />
+        </div>
+      </section>
+
+      {/* Any other components after this */}
+    </div>
   );
 }
 
