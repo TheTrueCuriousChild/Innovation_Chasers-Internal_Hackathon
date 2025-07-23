@@ -1,7 +1,7 @@
-import twitterIcon from "../../../assets/icons/twitter.png";
-import instagramIcon from "../../../assets/icons/instagram.png";
-import facebookIcon from "../../../assets/icons/facebook.png";
-import whatsappIcon from '../../../assets/icons/whatsapp.png';
+import twitterIcon from "../../assets/icons/twitter.png";
+import instagramIcon from "../../assets/icons/instagram.png";
+import facebookIcon from "../../assets/icons/facebook.png";
+import whatsappIcon from '../../assets/icons/whatsapp.png';
 
 function SocialMedia() {
   return (

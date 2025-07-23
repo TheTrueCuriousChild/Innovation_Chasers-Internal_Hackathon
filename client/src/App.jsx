@@ -1,5 +1,5 @@
 import NavBar from './navBar.jsx';
-import Footer from './components/Footer/Footer/Footer.jsx';
+import Footer from './components/Footer/Footer.jsx';
 import { useState } from 'react';
 import './App.css';
 
