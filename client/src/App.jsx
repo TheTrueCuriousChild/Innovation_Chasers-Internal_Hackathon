@@ -1,5 +1,6 @@
 import NavBar from './navBar.jsx';
 import Footer from './components/Footer/Footer.jsx';
+import SignIn from './components/SignIn/SignIn.jsx';
 import { useState } from 'react';
 import './App.css';
 
@@ -17,6 +18,7 @@ function App() {
       <div className="pageContent">
         {/* Main page content here */}
         <p>Hello</p>
+        <SignIn />
       </div>
 
       <Footer />
