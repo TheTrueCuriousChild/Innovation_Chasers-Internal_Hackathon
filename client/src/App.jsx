@@ -7,6 +7,8 @@ import './App.css';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+  const [showSignIn, setShowSignIn] = useState(false);
+  const [showSignUp, setShowSignUp] = useState(false);
 
   const toggleMode = () => {
     setDarkMode(prev => !prev);
@@ -14,21 +16,21 @@ function App() {
 
   return (
     <div className={darkMode ? 'app dark' : 'app'}>
-      <NavBar onToggleMode={toggleMode} />
+      <NavBar 
+        onToggleMode={toggleMode}
+        onSignInClick={() => setShowSignIn(true)}
+        onSignUpClick={() => setShowSignUp(true)}
+      />
 
       <div className="pageContent">
-        {/* Main page content here */}
         <p>Hello</p>
-        <SignIn />
-        <div>
-        <SignUp />
-        
       </div>
-      </div>
+
+      {showSignIn && <SignIn onClose={() => setShowSignIn(false)} />}
+      {showSignUp && <SignUp onClose={() => setShowSignUp(false)} />}
 
       <Footer />
     </div>
-  
   );
 }
 

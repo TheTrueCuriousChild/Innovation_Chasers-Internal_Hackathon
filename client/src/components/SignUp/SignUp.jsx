@@ -1,44 +1,60 @@
 import { useState } from 'react';
 import './SignUp.css';
-// Please make this popup , which would popup when the signup button is clicked (signup button is in the nav bar)
-// same for sign in
-function SignUp() {
+
+function SignUp({ onClose }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Just log for now
+    if (password !== confirmPassword) {
+      alert('Passwords do not match!');
+      return;
+    }
+
     console.log('Email:', email);
     console.log('Password:', password);
-
   };
 
   return (
-    <div className="signInContainer">
-      <h2>Sign Up</h2>
-      <form className="signInForm" onSubmit={handleSubmit}>
-        <label htmlFor="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          placeholder="you@example.com"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        {/* Add another section called confirnm password which stores the password only if pass and confrirm pass match  */}
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          placeholder="•••••••••••••"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+    <div className="modalOverlay" onClick={onClose}>
+      <div className="signUpContainer" onClick={(e) => e.stopPropagation()}>
+        <h2>Sign Up</h2>
+        <form className="signUpForm" onSubmit={handleSubmit}>
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="you@example.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
 
-        <button type="submit">Sign In</button>
-      </form>
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="••••••••"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+
+          <label htmlFor="confirmPassword">Confirm Password</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            placeholder="••••••••"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+          />
+
+          <button type="submit">Sign Up</button>
+        </form>
+
+        <button onClick={onClose} style={{ marginTop: '1rem' }}>Close</button>
+      </div>
     </div>
   );
 }
