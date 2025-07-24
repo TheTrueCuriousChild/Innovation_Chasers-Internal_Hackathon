@@ -2,6 +2,7 @@ import NavBar from './navBar.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import SignIn from './components/SignIn/SignIn.jsx';
 import SignUp from './components/SignUp/SignUp.jsx';
+import SlotSelector from './components/SlotSelector/SlotSelector.jsx';
 import { useState } from 'react';
 import './App.css';
 
@@ -23,7 +24,7 @@ function App() {
       />
 
       <div className="pageContent">
-        <p>Hello</p>
+        <SlotSelector />
       </div>
 
       {showSignIn && <SignIn onClose={() => setShowSignIn(false)} />}
