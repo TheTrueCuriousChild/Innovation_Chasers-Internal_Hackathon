@@ -1,0 +1,2 @@
+Issues faced:
+Export import issues due to es.js and common.js confile : Solved converting everything into commonjs
