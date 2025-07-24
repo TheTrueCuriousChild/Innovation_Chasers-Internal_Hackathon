@@ -1,35 +1,20 @@
-import NavBar from './navBar.jsx';
-// import Footer from './Footer.jsx';
-import SignIn from './components/SignIn.jsx';
-import SignUp from './components/SignUp.jsx';
 import { useState } from 'react';
-import './App.css';
+import Navbar from './navBar';
+import HeroSection from './components/HeroSection';
+import Features from './components/Features';
+import Footer from './components/Footer';
+import SignUp from './components/SignUp';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
-  const [showSignIn, setShowSignIn] = useState(false);
   const [showSignUp, setShowSignUp] = useState(false);
 
-  const toggleMode = () => {
-    setDarkMode(prev => !prev);
-  };
-
   return (
-    <div className={darkMode ? 'app dark' : 'app'}>
-      <NavBar 
-        onToggleMode={toggleMode}
-        onSignInClick={() => setShowSignIn(true)}
-        onSignUpClick={() => setShowSignUp(true)}
-      />
-
-      <div className="pageContent">
-        <p>Hello</p>
-      </div>
-
-      {showSignIn && <SignIn onClose={() => setShowSignIn(false)} />}
+    <div className="bg-[#fffaf0] min-h-screen text-center">
+      <Navbar onSignUp={() => setShowSignUp(true)} />
+      <HeroSection />
+      <Features />
+      <Footer />
       {showSignUp && <SignUp onClose={() => setShowSignUp(false)} />}
-
-      {/* <Footer /> */}
     </div>
   );
 }
