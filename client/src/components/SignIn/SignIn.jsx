@@ -36,7 +36,7 @@ function SignIn({ onClose }) {
 
           <button type="submit">Sign In</button>
         </form>
-        <button onClick={onClose} style={{ marginTop: '1rem' }}>Close</button>
+        <button onClick={onClose} className="closeModalButton">Close</button>
       </div>
     </div>
   );

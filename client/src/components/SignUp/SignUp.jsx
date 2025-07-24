@@ -53,7 +53,8 @@ function SignUp({ onClose }) {
           <button type="submit">Sign Up</button>
         </form>
 
-        <button onClick={onClose} style={{ marginTop: '1rem' }}>Close</button>
+        <button onClick={onClose} className="closeModalButton">Close</button>
+
       </div>
     </div>
   );
