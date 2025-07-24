@@ -1,0 +1,87 @@
+/* components/DateSelector.css */
+.date-picker-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: #eee;
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
+  font-family: sans-serif;
+}
+
+.label {
+  font-size: 10px;
+  color: gray;
+  font-weight: bold;
+}
+
+.date-display-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 10px;
+}
+
+.selected-date {
+  font-size: 14px;
+  color: #333;
+}
+
+.calendar-icon {
+  background: black;
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 2px;
+}
+
+.hidden-datepicker {
+  display: none;
+}/* components/DateSelector.css */
+.date-picker-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: #eee;
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
+  font-family: sans-serif;
+}
+
+.label {
+  font-size: 10px;
+  color: gray;
+  font-weight: bold;
+}
+
+.date-display-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 10px;
+}
+
+.selected-date {
+  font-size: 14px;
+  color: #333;
+}
+
+.calendar-icon {
+  background: black;
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 2px;
+}
+
+.hidden-datepicker {
+  display: none;
+}
