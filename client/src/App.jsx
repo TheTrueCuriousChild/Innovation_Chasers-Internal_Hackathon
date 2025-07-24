@@ -3,6 +3,7 @@ import Footer from './components/Footer/Footer.jsx';
 import SignIn from './components/SignIn/SignIn.jsx';
 import SignUp from './components/SignUp/SignUp.jsx';
 import SlotSelector from './components/SlotSelector/SlotSelector.jsx';
+import Middle from './middle/images.jsx';
 import { useState } from 'react';
 import './App.css';
 
@@ -25,6 +26,7 @@ function App() {
 
       <div className="pageContent">
         <SlotSelector />
+        <Middle />
       </div>
 
       {showSignIn && <SignIn onClose={() => setShowSignIn(false)} />}
