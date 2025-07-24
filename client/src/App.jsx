@@ -1,24 +1,35 @@
-import { useEffect } from 'react';
+import NavBar from './navBar.jsx';
+// import Footer from './Footer.jsx';
+import SignIn from './components/SignIn.jsx';
+import SignUp from './components/SignUp.jsx';
+import { useState } from 'react';
 import './App.css';
-import BookNow from './components/BookNow';
 
 function App() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  const [darkMode, setDarkMode] = useState(false);
+  const [showSignIn, setShowSignIn] = useState(false);
+  const [showSignUp, setShowSignUp] = useState(false);
+
+  const toggleMode = () => {
+    setDarkMode(prev => !prev);
+  };
 
   return (
-    <div className="App">
-      {/* Other sections like navbar, banner etc. can go here */}
+    <div className={darkMode ? 'app dark' : 'app'}>
+      <NavBar 
+        onToggleMode={toggleMode}
+        onSignInClick={() => setShowSignIn(true)}
+        onSignUpClick={() => setShowSignUp(true)}
+      />
 
-      <section className="book-now" data-aos="fade-up">
-        <div className="book-now-content">
-          <h2 className="section-title">Book Your Turf Now</h2>
-          <BookNow />
-        </div>
-      </section>
+      <div className="pageContent">
+        <p>Hello</p>
+      </div>
 
-      {/* Any other components after this */}
+      {showSignIn && <SignIn onClose={() => setShowSignIn(false)} />}
+      {showSignUp && <SignUp onClose={() => setShowSignUp(false)} />}
+
+      {/* <Footer /> */}
     </div>
   );
 }
